@@ -1,0 +1,95 @@
+@use '../../../styles/mixins' as *;
+
+.skeleton {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  list-style: none;
+
+  @include breakpoint(sm) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @include breakpoint(lg) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--card);
+  padding: 0.75rem;
+  box-shadow:
+    0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.pulse {
+  border-radius: 0.25rem;
+  background: var(--muted);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.imageBlock {
+  aspect-ratio: 1;
+}
+
+.textGroup {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pricesGroup {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.full {
+  width: 100%;
+  height: 1rem;
+}
+
+.threeQuarters {
+  width: 75%;
+  height: 1rem;
+}
+
+.third {
+  width: 33.333%;
+  height: 1rem;
+}
+
+.half {
+  width: 50%;
+  height: 1.5rem;
+}
+
+.twoThirds {
+  width: 66.666%;
+  height: 1rem;
+}
+
+.buttonBlock {
+  margin-top: 0.75rem;
+  width: 100%;
+  height: 3rem;
+  border-radius: var(--radius);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}

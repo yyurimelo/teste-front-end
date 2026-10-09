@@ -1,0 +1,37 @@
+@use '../../../styles/mixins' as *;
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: 1px solid #e5e7eb;
+  background: #fff;
+
+  @include breakpoint(md) {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+.tab {
+  padding-block: 0.5rem;
+  border: 0;
+  border-right: 1px solid #e5e7eb;
+  background: none;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  color: #374151;
+  transition: color 150ms;
+
+  &:last-child {
+    border-right: 0;
+  }
+
+  &:hover {
+    color: #4338ca;
+  }
+}
+
+.tabActive {
+  font-weight: 700;
+  color: #4338ca;
+}
