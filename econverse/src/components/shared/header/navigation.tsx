@@ -44,7 +44,7 @@ export function Navigation() {
             }}
             className={cn(styles.item, isActive && styles.itemActive)}
           >
-            {Icon && <Icon size={18} />}
+            {Icon && <Icon size={18} weight="bold"/>}
             {label}
           </a>
         );
