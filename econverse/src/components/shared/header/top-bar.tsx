@@ -44,7 +44,7 @@ export function TopBar() {
     <div className={styles.topBar}>
       {items.map(({ key, icon: Icon, content }) => (
         <div key={key} className={styles.item}>
-          <Icon size={26} />
+          <Icon size={26} weight="bold" />
           <div className={styles.content}>{content}</div>
         </div>
       ))}
