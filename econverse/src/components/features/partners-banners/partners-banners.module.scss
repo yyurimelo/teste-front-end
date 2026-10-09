@@ -1,0 +1,15 @@
+@use '../../../styles/mixins' as *;
+
+.section {
+  padding-block: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  @include breakpoint(md) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
