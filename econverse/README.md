@@ -1,8 +1,12 @@
 # Econverse — Teste Front-End
 
+![Preview da vitrine](public/seo.png)
+
 Vitrine de produtos da Econverse. React + TypeScript, empacotado com Vite.
 Estilos em Sass com CSS Modules. Sem biblioteca de componentes: botão,
 modal e carrossel são implementações próprias.
+
+**Demo:** https://teste-front-end-henna.vercel.app
 
 ## Como clonar
 
