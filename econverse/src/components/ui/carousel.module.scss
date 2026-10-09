@@ -1,0 +1,78 @@
+@use '../../styles/mixins' as *;
+
+.carousel {
+  position: relative;
+  width: 100%;
+}
+
+.viewport {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.track {
+  display: flex;
+  margin-left: -1rem;
+  padding-block: 1rem;
+}
+
+.item {
+  min-width: 0;
+  flex: 0 0 100%;
+  padding-left: 1rem;
+  scroll-snap-align: start;
+
+  @include breakpoint(sm) {
+    flex-basis: 50%;
+  }
+
+  @include breakpoint(lg) {
+    flex-basis: 25%;
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-block: auto;
+  display: none;
+  width: 1.75rem;
+  height: 1.75rem;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 9999px;
+  background: var(--background);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.15);
+  color: var(--foreground);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  touch-action: manipulation;
+
+  &:hover:not(:disabled) {
+    background: var(--muted);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  @include breakpoint(md) {
+    display: inline-flex;
+  }
+}
+
+.previous {
+  left: -2.5rem;
+}
+
+.next {
+  right: -2.5rem;
+}

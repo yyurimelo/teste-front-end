@@ -1,0 +1,12 @@
+@use '../../styles/mixins' as *;
+
+:where(.container) {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1400px;
+  padding-inline: 1rem;
+
+  @include breakpoint(md) {
+    padding-inline: 0;
+  }
+}
