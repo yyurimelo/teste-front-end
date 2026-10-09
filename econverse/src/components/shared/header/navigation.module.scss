@@ -1,0 +1,38 @@
+@use '../../../styles/mixins' as *;
+
+.nav {
+  display: flex;
+  height: 2.75rem;
+  align-items: center;
+  gap: 1.5rem;
+  overflow-x: auto;
+  border-top: 1px solid var(--border);
+  padding-inline: 1rem;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include breakpoint(xl) {
+    justify-content: center;
+    gap: 4rem;
+    overflow-x: visible;
+    padding-inline: 0;
+  }
+}
+
+.item {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+.itemActive {
+  color: var(--chart-4);
+}

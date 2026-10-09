@@ -1,0 +1,33 @@
+@use '../../../styles/mixins' as *;
+
+.topBar {
+  display: none;
+  border-bottom: 1px solid var(--border);
+  padding: 0.625rem 0.5rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+
+  @include breakpoint(md) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.highlight {
+  color: var(--chart-4);
+}

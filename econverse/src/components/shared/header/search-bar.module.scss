@@ -1,0 +1,30 @@
+.searchBar {
+  display: flex;
+  height: 2.75rem;
+  width: 100%;
+  max-width: 600px;
+  align-items: center;
+  border-radius: 10px;
+  background: var(--muted);
+  padding-inline: 1rem;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  outline: none;
+
+  &::placeholder {
+    color: var(--muted-foreground);
+  }
+}
+
+.icon {
+  flex-shrink: 0;
+  color: var(--muted-foreground);
+}
