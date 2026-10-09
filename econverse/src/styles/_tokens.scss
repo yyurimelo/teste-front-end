@@ -1,0 +1,30 @@
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.205 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.368 0.0017 286.32);
+  --card-hover: oklch(0.979 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.205 0 0);
+  --primary: oklch(0.8536 0.1724 92.24);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.967 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0.004 91.446);
+  --muted-foreground: oklch(0.703 0 0);
+  --accent: oklch(0.4436 0.1806 271.45);
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.901 0 0);
+  --input: oklch(0.901 0 0);
+  --ring: oklch(0.854 0.172 92.244);
+  --chart-4: oklch(0.381 0.217 275.433);
+  --blue: oklch(0.381 0.217 275.433);
+  --purple: oklch(0.265 0.077 292.084);
+  --radius: 4px;
+
+  --icon-blue-filter: invert(17.6%) sepia(23.7%) saturate(4127%)
+    hue-rotate(229.2deg) brightness(132%) contrast(142.7%);
+
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+}
