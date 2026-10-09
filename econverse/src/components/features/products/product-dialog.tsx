@@ -46,6 +46,11 @@ type DialogContentProps = {
 
 function DialogContent({ product, titleId }: DialogContentProps) {
   const [quantity, setQuantity] = useState(1);
+  const price = product.price * quantity;
+
+  function handleQuantityChange(newQuantity: number) {
+    setQuantity(newQuantity);
+  }
 
   return (
     <div className={styles.grid}>
@@ -64,7 +69,7 @@ function DialogContent({ product, titleId }: DialogContentProps) {
           {product.productName}
         </h2>
 
-        <p className={styles.price}>{formatPrice(product.price)}</p>
+        <p className={styles.price}>{formatPrice(price)}</p>
 
         <p className={styles.description}>
           Many desktop publishing packages and web page editors now many
@@ -81,7 +86,7 @@ function DialogContent({ product, titleId }: DialogContentProps) {
               type="button"
               aria-label="Diminuir quantidade"
               className={styles.stepButton}
-              onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+              onClick={() => handleQuantityChange(Math.max(1, quantity - 1))}
               disabled={quantity <= 1}
             >
               <MinusIcon size={20} weight="light" />
@@ -95,7 +100,7 @@ function DialogContent({ product, titleId }: DialogContentProps) {
               type="button"
               aria-label="Aumentar quantidade"
               className={styles.stepButton}
-              onClick={() => setQuantity((q) => q + 1)}
+              onClick={() => handleQuantityChange(quantity + 1)}
             >
               <PlusIcon size={20} weight="light" />
             </button>
