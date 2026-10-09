@@ -6,13 +6,17 @@ import styles from './hero-banner.module.scss';
 export function HeroBanner() {
   return (
     <section className={styles.hero}>
-      <img
-        src="/black-friday-wallpaper.jpg"
-        alt="Produtos em promoção nas prateleiras da Econverse"
-        width={4096}
-        height={2304}
-        className={styles.image}
-      />
+      <picture>
+        <source srcSet="/hero.webp" type="image/webp" />
+        <img
+          src="/hero.jpg"
+          alt="Produtos em promoção nas prateleiras da Econverse"
+          width={1920}
+          height={1080}
+          className={styles.image}
+          fetchPriority="high"
+        />
+      </picture>
 
       <div className={styles.overlay} aria-hidden="true" />
 

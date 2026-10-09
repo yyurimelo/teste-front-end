@@ -8,13 +8,13 @@ const banners = [
   {
     title: 'Parceiros',
     description: 'Lorem ipsum dolor sit amet, consectetur',
-    image: '/partners.png',
+    image: '/partners.webp',
     href: '/parceiros',
   },
   {
     title: 'Parceiros',
     description: 'Lorem ipsum dolor sit amet, consectetur',
-    image: '/partners.png',
+    image: '/partners.webp',
     href: '/parceiros',
   },
 ];

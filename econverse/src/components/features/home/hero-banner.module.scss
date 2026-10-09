@@ -13,6 +13,13 @@
   }
 }
 
+// `picture` nao aceita `position: absolute` util, entao ele e que vira
+// o bloco posicionado e a img preenche ele.
+picture {
+  position: absolute;
+  inset: 0;
+}
+
 .image {
   position: absolute;
   inset: 0;
