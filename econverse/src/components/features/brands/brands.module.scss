@@ -1,0 +1,62 @@
+@use '../../../styles/mixins' as *;
+
+.section {
+  padding-block: 2rem;
+
+  @include breakpoint(md) {
+    padding-block: 2.5rem;
+  }
+}
+
+.title {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  white-space: nowrap;
+  color: var(--accent);
+
+  @include breakpoint(md) {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+
+  @include breakpoint(md) {
+    gap: 1.5rem;
+  }
+}
+
+.item {
+  display: flex;
+  height: 9rem;
+  width: 9rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: var(--card);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.15);
+
+  @include breakpoint(md) {
+    height: 14.5rem;
+    width: 14.5rem;
+  }
+}
+
+.logo {
+  height: auto;
+  width: 5rem;
+
+  @include breakpoint(md) {
+    width: 8.75rem;
+  }
+}

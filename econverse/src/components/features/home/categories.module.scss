@@ -1,0 +1,113 @@
+@use '../../../styles/mixins' as *;
+
+.section {
+  width: 100%;
+}
+
+.wrap {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1280px;
+  padding: 2.5rem 1rem;
+
+  @include breakpoint(md) {
+    padding-block: 2rem;
+  }
+}
+
+.wrap {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1280px;
+  padding: 2.5rem 1rem;
+
+  @include breakpoint(md) {
+    padding-block: 2rem;
+  }
+}
+
+.list {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-block: 1rem;
+  margin-block: -1rem;
+  list-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include breakpoint(md) {
+    gap: 2rem;
+  }
+
+  @include breakpoint(xl) {
+    justify-content: center;
+  }
+}
+
+.item {
+  flex-shrink: 0;
+}
+
+.button {
+  display: flex;
+  width: 9rem;
+  flex-direction: column;
+  align-items: center;
+  border: 0;
+  background: none;
+  padding: 0;
+  &:hover {
+    .icon {
+      filter: var(--icon-blue-filter);
+    }
+
+    .label {
+      color: var(--blue);
+    }
+  }
+}
+
+.iconBox {
+  display: flex;
+  height: 140px;
+  width: 140px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 0 16px 0 rgb(0 0 0 / 0.24);
+  background: #F4F4F4;
+  transition: background-color 150ms;
+}
+
+.iconBoxActive {
+  background: #fff;
+}
+
+.icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  transition: filter 150ms;
+}
+
+.iconActive {
+  filter: var(--icon-blue-filter);
+}
+
+.label {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.25;
+  font-weight: 500;
+  color: #374151;
+  transition: color 150ms;
+}
+
+.labelActive {
+  color: var(--blue);
+}
